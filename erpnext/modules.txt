@@ -7,12 +7,12 @@ Setup
 Manufacturing
 Stock
 Support
-Utilities
+ERP Settings
 Assets
 Portal
 Maintenance
 Regional
-ERPNext Integrations
+ERP Integrations
 Quality Management
 Communication
 Telephony

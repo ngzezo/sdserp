@@ -17,10 +17,10 @@ $.extend(frappe.breadcrumbs.preferred, {
 });
 
 $.extend(frappe.breadcrumbs.module_map, {
-	"ERPNext Integrations": "Integrations",
+	"ERP Integrations": "Integrations",
 	Geo: "Settings",
 	Portal: "Website",
-	Utilities: "Settings",
+	"ERP Settings": "Settings",
 	"E-commerce": "Website",
 	Contacts: "CRM",
 });
