@@ -44,9 +44,9 @@ services:
         bench set-config -gp socketio_port $$SOCKETIO_PORT;
     environment:
       DB_HOST: db
-      DB_PORT: "3306"
-      REDIS_CACHE: redis-cache:6379
-      REDIS_QUEUE: redis-queue:6379
+      DB_PORT: "3307"
+      REDIS_CACHE: redis-cache:6380
+      REDIS_QUEUE: redis-queue:6381
       SOCKETIO_PORT: "9000"
     volumes:
       - sites:/home/frappe/frappe-bench/sites
@@ -67,9 +67,9 @@ services:
       - -c
     command:
       - >
-        wait-for-it -t 120 db:3306;
-        wait-for-it -t 120 redis-cache:6379;
-        wait-for-it -t 120 redis-queue:6379;
+        wait-for-it -t 120 db:3307;
+        wait-for-it -t 120 redis-cache:6380;
+        wait-for-it -t 120 redis-queue:6381;
         export start=`date +%s`;
         until [[ -n `grep -hs ^ sites/common_site_config.json | jq -r ".db_host // empty"` ]] && \
           [[ -n `grep -hs ^ sites/common_site_config.json | jq -r ".redis_cache // empty"` ]] && \
@@ -102,10 +102,13 @@ services:
       - --skip-character-set-client-handshake
       - --bind-address=0.0.0.0
       - --skip-innodb-read-only-compressed
+      - --port=3307
     environment:
       MYSQL_ROOT_PASSWORD: admin
     volumes:
       - db-data:/var/lib/mysql
+    ports:
+      - "3307:3307"
 
   # Frontend nginx service
   frontend:
@@ -132,7 +135,7 @@ services:
       - sites:/home/frappe/frappe-bench/sites
       - logs:/home/frappe/frappe-bench/logs
     ports:
-      - "8462:8080"
+      - "8463:8080"
 
   # Long queue worker
   queue-long:
@@ -173,8 +176,14 @@ services:
     deploy:
       restart_policy:
         condition: on-failure
+    command:
+      - redis-server
+      - --port
+      - "6381"
     volumes:
       - redis-queue-data:/data
+    ports:
+      - "6381:6381"
 
   # Redis for cache
   redis-cache:
@@ -183,6 +192,12 @@ services:
     deploy:
       restart_policy:
         condition: on-failure
+    command:
+      - redis-server
+      - --port
+      - "6380"
+    ports:
+      - "6380:6380"
 
   # Scheduler service
   scheduler:
