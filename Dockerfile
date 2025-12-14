@@ -142,6 +142,11 @@ RUN bench init \
 COPY --chown=frappe:frappe erpnext/hooks.py /home/frappe/frappe-bench/apps/erpnext/erpnext/hooks.py
 COPY --chown=frappe:frappe package.json /home/frappe/frappe-bench/apps/erpnext/package.json
 COPY --chown=frappe:frappe pyproject.toml /home/frappe/frappe-bench/apps/erpnext/pyproject.toml
+COPY --chown=frappe:frappe erpnext/modules.txt /home/frappe/frappe-bench/apps/erpnext/erpnext/modules.txt
+COPY --chown=frappe:frappe erpnext/public/js/conf.js /home/frappe/frappe-bench/apps/erpnext/erpnext/public/js/conf.js
+COPY --chown=frappe:frappe erpnext/public/images/ /home/frappe/frappe-bench/apps/erpnext/erpnext/public/images/
+COPY --chown=frappe:frappe erpnext/utilities/doctype/ /home/frappe/frappe-bench/apps/erpnext/erpnext/utilities/doctype/
+COPY --chown=frappe:frappe erpnext/erpnext_integrations/doctype/ /home/frappe/frappe-bench/apps/erpnext/erpnext/erpnext_integrations/doctype/
 
 FROM base AS backend
 
