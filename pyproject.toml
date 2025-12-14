@@ -1,9 +1,9 @@
 [project]
-name = "erpnext"
+name = "sdserp"
 authors = [
     { name = "Frappe Technologies Pvt Ltd", email = "developers@frappe.io"}
 ]
-description = "Open Source ERP"
+description = "SDS ERP - Open Source ERP"
 requires-python = ">=3.10"
 readme = "README.md"
 dynamic = ["version"]

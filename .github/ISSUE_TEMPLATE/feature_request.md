@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Suggest an idea to improve ERPNext
+about: Suggest an idea to improve SDS ERP
 title: ''
 labels: feature-request
 assignees: ''
@@ -8,9 +8,9 @@ assignees: ''
 ---
 
 <!--
-Welcome to ERPNext issue tracker! Before creating an issue, please heed the following:
+Welcome to SDS ERP issue tracker! Before creating an issue, please heed the following:
 
-1. This tracker should only be used to report bugs and request features / enhancements to ERPNext
+1. This tracker should only be used to report bugs and request features / enhancements to SDS ERP
     - For questions and general support, checkout the manual https://docs.erpnext.com or use https://discuss.frappe.io/c/erpnext/6
 2. Use the search function before creating a new issue. Duplicates will be closed and directed to
    the original discussion.
@@ -20,9 +20,8 @@ Welcome to ERPNext issue tracker! Before creating an issue, please heed the foll
 Please keep in mind that we get many many requests and we can't possibly work on all of them, we prioritize development based on the goals of the product and organization. Feature requests are still welcome as it helps us in research when we do decide to work on the requested feature. 
 
 If you're in urgent need to a feature, please try the following channels to get paid developments done quickly:
-1. Certified ERPNext partners: https://erpnext.com/partners 
-2. Developer community on ERPNext forums: https://discuss.frappe.io/c/framework/5  
-3. Telegram group for ERPNext/Frappe development work: https://t.me/erpnext_opps 
+1. Developer community on forums: https://discuss.frappe.io/c/framework/5  
+2. Telegram group for development work: https://t.me/erpnext_opps 
 
 -->
 

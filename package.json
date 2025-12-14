@@ -1,6 +1,6 @@
 {
-  "name": "erpnext",
-  "description": "Open Source ERP System powered by the Frappe Framework",
+  "name": "sdserp",
+  "description": "SDS ERP - Open Source ERP System powered by the Frappe Framework",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/frappe/erpnext.git"

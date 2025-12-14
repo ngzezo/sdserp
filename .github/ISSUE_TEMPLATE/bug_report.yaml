@@ -1,14 +1,14 @@
 name: Bug Report
-description: Report a bug encountered while using ERPNext
+description: Report a bug encountered while using SDS ERP
 labels: ["bug"]
 
 body:
   - type: markdown
     attributes:
       value: |
-        Welcome to ERPNext issue tracker! Before creating an issue, please heed the following:
+        Welcome to SDS ERP issue tracker! Before creating an issue, please heed the following:
 
-        1. This tracker should only be used to report bugs and request features / enhancements to ERPNext
+        1. This tracker should only be used to report bugs and request features / enhancements to SDS ERP
             - For questions and general support, checkout the [user manual](https://docs.erpnext.com/) or use [forum](https://discuss.frappe.io/c/erpnext/6)
             - For documentation issues, propose edit on [documentation site](https://docs.erpnext.com/) directly.
         2. When making a bug report, make sure you provide all required information. The easier it is for
@@ -28,7 +28,7 @@ body:
     id: module
     attributes:
       label: Module
-      description: Select affected module of ERPNext.
+      description: Select affected module.
       multiple: true
       options:
         - accounts

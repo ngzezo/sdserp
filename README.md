@@ -1,15 +1,8 @@
 <div align="center">
-    <a href="https://frappe.io/erpnext">
-	<img src="./erpnext/public/images/v16/erpnext.svg" alt="ERPNext Logo" height="80px" width="80xp"/>
-    </a>
-    <h2>ERPNext</h2>
+    <h2>SDS ERP</h2>
     <p align="center">
         <p>Powerful, Intuitive and Open-Source ERP</p>
     </p>
-
-[![Learn on Frappe School](https://img.shields.io/badge/Frappe%20School-Learn%20ERPNext-blue?style=flat-square)](https://frappe.school)<br><br>
-[![CI](https://github.com/frappe/erpnext/actions/workflows/server-tests-mariadb.yml/badge.svg?event=schedule)](https://github.com/frappe/erpnext/actions/workflows/server-tests-mariadb.yml)
-[![docker pulls](https://img.shields.io/docker/pulls/frappe/erpnext-worker.svg)](https://hub.docker.com/r/frappe/erpnext-worker)
 
 </div>
 
@@ -17,21 +10,13 @@
 	<img src="./erpnext/public/images/v16/hero_image.png"/>
 </div>
 
-<div align="center">
-	<a href="https://erpnext-demo.frappe.cloud/api/method/erpnext_demo.erpnext_demo.auth.login_demo">Live Demo</a>
-	-
-	<a href="https://frappe.io/erpnext">Website</a>
-	-
-	<a href="https://docs.frappe.io/erpnext/">Documentation</a>
-</div>
-
-## ERPNext
+## SDS ERP
 
 100% Open-Source ERP system to help you run your business.
 
 ### Motivation
 
-Running a business is a complex task - handling invoices, tracking stock, managing personnel and even more ad-hoc activities. In a market where software is sold separately to manage each of these tasks, ERPNext does all of the above and more, for free.
+Running a business is a complex task - handling invoices, tracking stock, managing personnel and even more ad-hoc activities. In a market where software is sold separately to manage each of these tasks, SDS ERP does all of the above and more, for free.
 
 ### Key Features
 
@@ -100,7 +85,7 @@ See [Frappe Docker](https://github.com/frappe/frappe_docker?tab=readme-ov-file#t
 
 The Easy Way: our install script for bench will install all dependencies (e.g. MariaDB). See https://github.com/frappe/bench for more details.
 
-New passwords will be created for the ERPNext "Administrator" user, the MariaDB root user, and the frappe user (the script displays the passwords and saves them to ~/frappe_passwords.txt).
+New passwords will be created for the "Administrator" user, the MariaDB root user, and the frappe user (the script displays the passwords and saves them to ~/frappe_passwords.txt).
 
 
 ### Local
@@ -115,25 +100,25 @@ To setup the repository locally follow the steps mentioned below:
 2. In a separate terminal window, run the following commands:
    ```
    # Create a new site
-   bench new-site erpnext.localhost
+   bench new-site sdserp.localhost
    ```
 
-3. Get the ERPNext app and install it
+3. Get the app and install it
    ```
-   # Get the ERPNext app
+   # Get the app
    bench get-app https://github.com/frappe/erpnext
 
    # Install the app
-   bench --site erpnext.localhost install-app erpnext
+   bench --site sdserp.localhost install-app erpnext
    ```
 
-4. Open the URL `http://erpnext.localhost:8000/app` in your browser, you should see the app running
+4. Open the URL `http://sdserp.localhost:8000/app` in your browser, you should see the app running
 
 ## Learning and community
 
-1. [Frappe School](https://school.frappe.io) - Learn Frappe Framework and ERPNext from the various courses by the maintainers or from the community.
-2. [Official documentation](https://docs.erpnext.com/) - Extensive documentation for ERPNext.
-3. [Discussion Forum](https://discuss.frappe.io/c/erpnext/6) - Engage with community of ERPNext users and service providers.
+1. [Frappe School](https://school.frappe.io) - Learn Frappe Framework and SDS ERP from the various courses by the maintainers or from the community.
+2. [Official documentation](https://docs.erpnext.com/) - Extensive documentation.
+3. [Discussion Forum](https://discuss.frappe.io/c/erpnext/6) - Engage with community of users and service providers.
 4. [Telegram Group](https://erpnext_public.t.me) - Get instant help from huge community of users.
 
 
