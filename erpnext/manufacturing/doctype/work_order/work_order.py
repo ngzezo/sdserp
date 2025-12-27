@@ -572,9 +572,9 @@ class WorkOrder(Document):
 		):
 			status = "In Process"
 
-		if self.track_semi_finished_goods and status != "Completed":
-			if op_status := self.get_status_based_on_operation():
-				status = op_status
+		if status != "Completed":
+			if not all(d.status == "Pending" for d in self.operations):
+				status = "In Process"
 
 		if status == "Not Started" and self.reserve_stock:
 			for row in self.required_items:
@@ -588,11 +588,6 @@ class WorkOrder(Document):
 					break
 
 		return status
-
-	def get_status_based_on_operation(self):
-		for row in self.operations:
-			if row.status != "Completed":
-				return "In Process"
 
 	def update_work_order_qty(self):
 		"""Update **Manufactured Qty** and **Material Transferred for Qty** in Work Order
@@ -2570,6 +2565,8 @@ def create_job_card(work_order, row, enable_capacity_planning=False, auto_create
 		work_order.transfer_material_against == "Job Card" and not work_order.skip_transfer
 	):
 		doc.get_required_items()
+		if work_order.track_semi_finished_goods:
+			doc.set_scrap_items()
 
 	if auto_create:
 		doc.flags.ignore_mandatory = True
